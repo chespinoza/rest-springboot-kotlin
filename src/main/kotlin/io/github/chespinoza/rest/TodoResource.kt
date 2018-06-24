@@ -14,9 +14,9 @@ import javax.persistence.Id
 
 interface TodoRepository: JpaRepository<Todo, Long>
 
-@RestController @RequestMapping(value = "/todo") @EnableWebMvc
+@RestController @RequestMapping(value = ["/todo"]) @EnableWebMvc
 class TodoResource(val todoRepo: TodoRepository) {
-    @GetMapping(value = "/")
+    @GetMapping(value = ["/"])
     fun getAll() = todoRepo.findAll()
 }
 
